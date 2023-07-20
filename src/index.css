@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --teal: #008080; /*#804dee*/
+  --teal-2: #004140; /*#00cea8*/
+  /* --teal-3: #004140; #00cea8 */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -34,19 +40,22 @@
 }
 
 .violet-gradient {
-  background: #804dee;
-  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+  background: var(--teal);
+  background: linear-gradient(-90deg, var(--teal) 0%, rgba(60, 51, 80, 0) 100%);
   background: -webkit-linear-gradient(
     -90deg,
-    #804dee 0%,
+    var(--teal) 0%,
     rgba(60, 51, 80, 0) 100%
   );
 }
-
 .green-pink-gradient {
-  background: "#00cea8";
-  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
-  background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+  background: var(--teal-2);
+  background: linear-gradient(90.13deg, var(--teal-2) 1.9%, var(teal) 97.5%);
+  background: -webkit-linear-gradient(
+    -90.13deg,
+    var(--teal-2) 1.9%,
+    var(teal) 97.5%
+  );
 }
 
 .orange-text-gradient {
